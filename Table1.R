@@ -21,7 +21,7 @@ rm_covsum(df_3w, covs = c(norm_var, skew_var), digits = 1, include_missing = T)
 rm_covsum(df_3w, covs = norm_var, maincov = "stabilization",digits = 1, pvalue =T, IQR = T, testcont = "ANOVA", include_missing = T, full = FALSE)
 rm_covsum(df_3w, covs = skew_var, maincov = "stabilization",digits = 2, pvalue =T, IQR = T, include_missing = T, full = FALSE)
 
-## 3. Change from baseline to 3-weeks
+## 3. Characteristic comparison for change from baseline to 3-weeks
 df_base_3w <- subset(df_final, Visit_new %in% c(1, 2))
 df_base_3w <- subset(df_base_3w, select = c(1, 2, 13:15, 19, 21:23, 25, 30, 33, 31, 32, 41, 42, 74))
 df_wide <- reshape(df_base_3w, idvar = c("StudyID", "stabilization"), timevar = "Visit_new", direction = "wide")
