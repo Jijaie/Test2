@@ -14,7 +14,7 @@ rm_covsum(df_24m, covs = skew_var, maincov = "stabilization",digits = 2, pvalue 
 # 2. Characteristic comparison for change from 3-weeks to 24-months
 df_3w_24m <- subset(df_final, Visit_new %in% c(2, 10))
 df_3w_24m <- subset(df_3w_24m, select = c(1, 2, 13:15, 19, 21:23, 25, 30, 33, 31, 32, 41, 42, 74))
-df_wide <- reshape(df_3w_24m, idvar = c("StudyID", "stablization"), timevar = "Visit_new", direction = "wide")
+df_wide <- reshape(df_3w_24m, idvar = c("StudyID", "stabilization"), timevar = "Visit_new", direction = "wide")
 var <- names(df_3w_24m)[3:16]
 
 for (i in 3:16){
